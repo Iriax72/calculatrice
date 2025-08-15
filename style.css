@@ -9,21 +9,21 @@ body{
     grid-template-columns: 75% 25%;
     grid-template-rows: 25% 56.25% 18.75%;
     grid-template-areas: 
-    "e e"
-    "n o"
-    "c o";
+    "ecran ecran"
+    "nbrs operateurs"
+    "cmd operateurs";
     padding: 8px;
 }
 
 #ecran{
-    grid-area: "e";
+    grid-area: ecran;
     background-color: blueviolet;
     min-height: 80%;
     min-width: 80%;
 }
 
 #nombres{
-    grid-area: "n";
+    grid-area: nbrs;
     background-color: green;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +31,7 @@ body{
 }
 
 #operateur{
-    grid-area: "o";
+    grid-area: operateurs;
     background-color: aqua;
     display: grid;
     grid-template-columns: 1fr;
@@ -49,7 +49,7 @@ body{
 #addition{grid-area: "+";}
 
 #commandes{
-    grid-area:"c";
+    grid-area: cmd;
     background-color: chocolate;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
