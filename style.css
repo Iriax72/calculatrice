@@ -53,11 +53,11 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "0 . AC";
+    grid-template-areas: "0 virgule AC";
 }
 
 #zero{grid-area: "0";}
-#virgule{grid-area: ".";}
+#virgule{grid-area: "virgule";}
 #AC{grid-area: "AC";}
 
 footer{
