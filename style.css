@@ -1,0 +1,19 @@
+body{
+    background-color: "black";
+}
+
+#calculatrice{
+    background-color: darkgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "e e"
+    "n o"
+    "c o";
+}
+
+#ecran{grid-area: "e";}
+#nombres{grid-area: "n";}
+#operateur{grid-area: "o";}
+#commandes{grid-area:"c";}
