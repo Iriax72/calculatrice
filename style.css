@@ -14,10 +14,46 @@ body{
     padding: 8px;
 }
 
-#ecran{grid-area: "e";}
-#nombres{grid-area: "n";}
-#operateur{grid-area: "o";}
-#commandes{grid-area:"c";}
+#ecran{
+    grid-area: "e";
+    background-color: blueviolet;
+    min-height: 80%;
+    min-width: 80%;
+}
+
+#nombres{
+    grid-area: "n";
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "1 2 3"
+    "4 5 6"
+    "7 8 9";
+}
+
+#operateur{
+    grid-area: "o";
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "/"
+    "X"
+    "-"
+    "+";
+}
+
+#commandes{
+    grid-area:"c";
+    background-color: chocolate;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "0 . AC";
+}
 
 footer{
     background-color: grey;
