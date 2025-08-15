@@ -22,14 +22,6 @@ body{
     min-width: 80%;
 }
 
-#nombres{
-    grid-area: nbrs;
-    background-color: green;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
 #operateur{
     grid-area: operateurs;
     background-color: aqua;
@@ -41,6 +33,14 @@ body{
     "X"
     "-"
     "+";
+}
+
+#nombres{
+    grid-area: nbrs;
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #division{grid-area: "/";}
