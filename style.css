@@ -9,9 +9,10 @@ body{
     border-radius: 12px;
     display: grid;
     grid-template-columns: 75% 25%;
-    grid-template-rows: 25% 56.25% 18.75%;
+    grid-template-rows: 20% 16% 48% 16%;
     grid-template-areas: 
     "ecran ecran"
+    "AC AC"
     "nbrs operateurs"
     "cmd operateurs";
     margin: 15px auto;
@@ -33,6 +34,8 @@ body{
     letter-spacing: 4px;
     color: orange;
 }
+
+#AC_div{grid-area: AC;}
 
 #operateur{
     grid-area: operateurs;
@@ -64,12 +67,12 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "0 virgule AC";
+    grid-template-areas: "zero0 virgule egal";
 }
 
-#zero{grid-area: "0";}
-#virgule{grid-area: "virgule";}
-#AC{grid-area: "AC";}
+#zero{grid-area: zero0;}
+#virgule{grid-area: virgule;}
+#egal{grid-area: egal;}
 
 button{
     margin: 6px;
