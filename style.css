@@ -35,7 +35,18 @@ body{
     color: orange;
 }
 
-#AC_div{grid-area: AC;}
+#cmd1{
+    grid-area: AC;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "AC paran1 paran2 factorielle"
+}
+
+#AC_btn{grid-area: AC;}
+#paran1{grid-area: paran1;}
+#paran2{grid-area: paran2;}
+#factorielle{grid-area: factorielle;}
 
 #operateur{
     grid-area: operateurs;
@@ -62,7 +73,7 @@ body{
 #soustraction{grid-area: "-";}
 #addition{grid-area: "+";}
 
-#commandes{
+#cmd2{
     grid-area: cmd;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
