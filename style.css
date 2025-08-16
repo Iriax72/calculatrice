@@ -5,6 +5,8 @@ body{
 #calculatrice{
     background-color: darkgrey;
     min-height: 400px;
+    max-width: 80%;
+    border-radius: 12px;
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 25% 56.25% 18.75%;
@@ -16,6 +18,7 @@ body{
 }
 
 #ecran{
+    border-radius: 15px;
     grid-area: ecran;
     background-color: blueviolet;
     min-height: 80%;
