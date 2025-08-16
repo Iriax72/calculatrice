@@ -64,5 +64,6 @@ const valeurs = {
 while(!isEgalPressed){
     btn_egal.onclick(isEgalPressed = true);
     btns.forEach(element => {element.onclick(input.push(valeurs[element.id]))});
+    btn_AC.onclick(input.pop())
     p_ecran.innerHTML(string(input));
 }
