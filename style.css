@@ -28,7 +28,7 @@ body{
 
 #ecran p{
     font-family: monospace;
-    font-size: 5rem;
+    font-size: 4.5rem;
     letter-spacing: 4px;
 }
 
@@ -76,4 +76,5 @@ button{
 footer{
     background-color: grey;
     margin-top: 50px;
+    width: 100vw;
 }
