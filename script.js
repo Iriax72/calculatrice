@@ -20,21 +20,20 @@ const btn_AC = document.getElementById("AC_btn");
 const btn_paran1 = document.getElementById("paran1");
 const btn_paran2 = document.getElementById("paran2");
 const btn_fac = document.getElementById("factorielle");
-const btn_virgule = document.getElementById("virtule");
+const btn_virgule = document.getElementById("virgule");
 const cmds = [btn_AC, btn_paran1, btn_paran2, btn_fac, btn_virgule];
 
-const btns = chiffres + operateurs + cmds.filter(cmd => {cmd !== btn_AC});
+const btns = chiffres.concat(operateurs, cmds.filter(cmd => cmd !== btn_AC));
 
 const btn_egal = document.getElementById("egal");
-let isEgalPressed = false;
 
 let input = [];
-const p_ecran = document.getElementById("p_ecran")
+const p_ecran = document.getElementById("p_ecran");
 
 function string(list){
     let str = "";
-    list.forEach(element => {str += element})
-    return str
+    list.forEach(element => {str += element});
+    return str;
 }
 
 //l'index est l'id du boutton.
@@ -61,9 +60,14 @@ const valeurs = {
 
 // LE CODE:
 
-while(!isEgalPressed){
-    btn_egal.onclick(isEgalPressed = true);
-    btns.forEach(element => {element.onclick(input.push(valeurs[element.id]))});
-    btn_AC.onclick(input.pop())
+btns.forEach(button => {
+    button.onclick(function(){
+        input.push(valeurs[element.id]);
+        p_ecran.innerHTML(string(input));
+        });
+});
+
+btn_AC.onclick(function(){
+    input.pop();
     p_ecran.innerHTML(string(input));
-}
+});
