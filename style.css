@@ -14,7 +14,7 @@ body{
     "ecran ecran"
     "nbrs operateurs"
     "cmd operateurs";
-    margin: 5px auto;
+    margin: 15px auto;
     padding: 8px;
 }
 
@@ -30,6 +30,7 @@ body{
     font-family: monospace;
     font-size: 4.5rem;
     letter-spacing: 4px;
+    color: orange;
 }
 
 #operateur{
