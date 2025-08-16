@@ -38,7 +38,7 @@ function string(list){
 }
 
 //l'index est l'id du boutton.
-valeurs = {
+const valeurs = {
     "zero": 0,
     "b1": 1,
     "b2": 2,
