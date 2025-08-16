@@ -26,6 +26,12 @@ body{
     min-width: 80%;
 }
 
+#ecran p{
+    font-family: monospace;
+    font-size: 5rem;
+    letter-spacing: 4px;
+}
+
 #operateur{
     grid-area: operateurs;
     background-color: aqua;
@@ -41,7 +47,6 @@ body{
 
 #nombres{
     grid-area: nbrs;
-    background-color: green;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -54,7 +59,6 @@ body{
 
 #commandes{
     grid-area: cmd;
-    background-color: chocolate;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -65,7 +69,11 @@ body{
 #virgule{grid-area: "virgule";}
 #AC{grid-area: "AC";}
 
+button{
+    margin: 6px;
+}
+
 footer{
     background-color: grey;
-    margin-top: 10px;
+    margin-top: 50px;
 }
