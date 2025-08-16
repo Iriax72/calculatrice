@@ -23,18 +23,46 @@ const btn_fac = document.getElementById("factorielle");
 const btn_virgule = document.getElementById("virtule");
 const cmds = [btn_AC, btn_paran1, btn_paran2, btn_fac, btn_virgule];
 
-const btns = chiffres + operateurs + cmds;
+const btns = chiffres + operateurs + cmds.filter(cmd => {cmd !== btn_AC});
 
 const btn_egal = document.getElementById("egal");
 let isEgalPressed = false;
 
 let input = [];
+const p_ecran = document.getElementById("p_ecran")
 
+function string(list){
+    let str = "";
+    list.forEach(element => {str += element})
+    return str
+}
+
+//l'index est l'id du boutton.
+valeurs = {
+    "zero": 0,
+    "b1": 1,
+    "b2": 2,
+    "b3": 3,
+    "b4": 4,
+    "b5": 5,
+    "b6": 6,
+    "b7": 7,
+    "b8": 8,
+    "b9": 9,
+    "addition": "+",
+    "soustraction": "-",
+    "multiplication": "X",
+    "division": "/",
+    "paran1": "(",
+    "paran2": ")",
+    "virgule": ",",
+    "factorielle": "!"
+};
 
 // LE CODE:
 
 while(!isEgalPressed){
     btn_egal.onclick(isEgalPressed = true);
+    btns.forEach(element => {element.onclick(input.push(valeurs[element.id]))});
+    p_ecran.innerHTML(string(input));
 }
-
-alert("egalPressed");
