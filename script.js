@@ -61,13 +61,13 @@ const valeurs = {
 // LE CODE:
 
 btns.forEach(button => {
-    button.onclick(function(){
+    button.onclick = function(){
         input.push(valeurs[element.id]);
         p_ecran.innerHTML(string(input));
-        });
+        };
 });
 
-btn_AC.onclick(function(){
+btn_AC.onclick = function(){
     input.pop();
     p_ecran.innerHTML(string(input));
-});
+};
