@@ -62,7 +62,7 @@ const valeurs = {
 
 btns.forEach(button => {
     button.onclick = function(){
-        input.push(valeurs[element.id]);
+        input.push(valeurs[button.id]);
         p_ecran.innerHTML(string(input));
         };
 });
