@@ -4,8 +4,8 @@ body{
 
 #calculatrice{
     background-color: darkgrey;
-    min-height: 400px;
-    max-width: 80%;
+    min-height: 70vh;
+    max-width: 80vw;
     border-radius: 12px;
     display: grid;
     grid-template-columns: 75% 25%;
