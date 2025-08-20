@@ -48,7 +48,7 @@ body{
 #paran2{grid-area: paran2;}
 #factorielle{grid-area: factorielle;}
 
-#operateur{
+#operateurs{
     grid-area: operateurs;
     background-color: aqua;
     display: grid;
