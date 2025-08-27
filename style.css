@@ -25,9 +25,6 @@ body{
     background-color: blueviolet;
     min-height: 80%;
     min-width: 80%;
-    padding-left: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 #ecran p{
@@ -35,6 +32,7 @@ body{
     font-size: 3.5rem;
     letter-spacing: 4px;
     color: orange;
+    margin: 5px;
 }
 
 #cmd1{
