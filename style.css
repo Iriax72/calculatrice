@@ -26,6 +26,8 @@ body{
     min-height: 80%;
     min-width: 80%;
     padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 #ecran p{
@@ -40,10 +42,10 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "AC paran1 paran2 factorielle"
+    grid-template-areas: "virgule paran1 paran2 factorielle"
 }
 
-#AC_btn{grid-area: AC;}
+#virgule{grid-area: virgule;}
 #paran1{grid-area: paran1;}
 #paran2{grid-area: paran2;}
 #factorielle{grid-area: factorielle;}
@@ -77,11 +79,11 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "zero0 virgule egal";
+    grid-template-areas: "zero0 AC egal";
 }
 
 #zero{grid-area: zero0;}
-#virgule{grid-area: virgule;}
+#AC_button{grid-area: AC;}
 #egal{grid-area: egal;}
 
 button{
