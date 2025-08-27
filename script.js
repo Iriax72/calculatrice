@@ -4,9 +4,9 @@ const cmd1 = document.querySelector("#cmd1");
 
 const b0 = document.querySelector("#zero");
 
-const chiffres = nombresContainer.children.concat([b0]);
-const operateurs = operateursContainer.children;
-const cmds = cmd1.children;
+const chiffres = [...nombresContainer.children].concat([b0]);
+const operateurs = [...operateursContainer.children];
+const cmds = [...cmd1.children];
 const btns = chiffres.concat(operateurs, cmds);
 
 const btn_egal = document.querySelector("#egal");
