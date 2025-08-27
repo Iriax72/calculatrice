@@ -17,7 +17,7 @@ const p_ecran = document.querySelector("#p_ecran");
 
 function string(list){
     let str = "";
-    list.forEach(element => {str += element});
+    list.forEach(element => {str + element});
     return str;
 }
 
