@@ -1,34 +1,19 @@
-const b1 = document.getElementById("b1");
-const b2 = document.getElementById("b2");
-const b3 = document.getElementById("b3");
-const b4 = document.getElementById("b4");
-const b5 = document.getElementById("b5");
-const b6 = document.getElementById("b6");
-const b7 = document.getElementById("b7");
-const b8 = document.getElementById("b8");
-const b9 = document.getElementById("b9");
-const b0 = document.getElementById("zero");
-const chiffres = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b0];
+const nombresContainer = document.querySelector("#nombres");
+const operateursContainer = document.querySelector("#operateurs");
+const cmd1 = document.querySelector("#cmd1");
 
-const btn_add = document.getElementById("addition");
-const btn_sou = document.getElementById("soustraction");
-const btn_mul = document.getElementById("multiplication");
-const btn_div = document.getElementById("division");
-const operateurs = [btn_add, btn_sou, btn_mul, btn_div];
+const b0 = document.querySelector("#zero");
 
-const btn_AC = document.getElementById("AC_btn");
-const btn_paran1 = document.getElementById("paran1");
-const btn_paran2 = document.getElementById("paran2");
-const btn_fac = document.getElementById("factorielle");
-const btn_virgule = document.getElementById("virgule");
-const cmds = [btn_AC, btn_paran1, btn_paran2, btn_fac, btn_virgule];
+const chiffres = nombresContainer.children.concat([b0]);
+const operateurs = operateursContainer.children;
+const cmds = cmd1.children;
+const btns = chiffres.concat(operateurs, cmds);
 
-const btns = chiffres.concat(operateurs, cmds.filter(cmd => cmd !== btn_AC));
-
-const btn_egal = document.getElementById("egal");
+const btn_egal = document.querySelector("#egal");
+const btn_AC = document.querySelector("AC_btn");
 
 let input = [];
-const p_ecran = document.getElementById("p_ecran");
+const p_ecran = document.querySelector("#p_ecran");
 
 function string(list){
     let str = "";
@@ -63,11 +48,11 @@ const valeurs = {
 btns.forEach(button => {
     button.onclick = function(){
         input.push(valeurs[button.id]);
-        p_ecran.innerHTML(string(input));
+        p_ecran.innerText(string(input));
         };
 });
 
 btn_AC.onclick = function(){
     input.pop();
-    p_ecran.innerHTML(string(input));
+    p_ecran.innerText(string(input));
 };
