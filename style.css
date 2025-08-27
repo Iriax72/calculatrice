@@ -27,6 +27,7 @@ body{
     min-width: 80%;
     display: flex;
     justify-content: start;
+    align-items: center;
 }
 
 #ecran p{
