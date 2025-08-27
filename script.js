@@ -17,8 +17,12 @@ const p_ecran = document.querySelector("#p_ecran");
 
 function string(list){
     let str = "";
-    list.forEach(element => {str + element});
+    list.forEach(element => {str += element});
     return str;
+}
+
+function actualiserEcran(){
+    p_ecran.innerText() = string(input);
 }
 
 //l'index est l'id du boutton.
@@ -48,11 +52,11 @@ const valeurs = {
 btns.forEach(button => {
     button.onclick = function(){
         input.push(valeurs[button.id]);
-        p_ecran.innerText(string(input));
+        actualiserEcran();
         };
 });
 
 btn_AC.onclick = function(){
     input.pop();
-    p_ecran.innerText(string(input));
+    actualiserEcran();
 };
