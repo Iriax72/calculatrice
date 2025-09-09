@@ -87,6 +87,11 @@ body{
 #del_btn{grid-area: del;}
 #egal{grid-area: egal;}
 
+.img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
 button{
     margin: 6px;
 }
