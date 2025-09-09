@@ -12,7 +12,7 @@ const btns = chiffres.concat(operateurs, cmds);
 const btn_egal = document.querySelector("#egal");
 const btn_del = document.querySelector("del_btn");
 
-let input = [];
+let screenText = [];
 const p_ecran = document.querySelector("#p_ecran");
 
 function string(list){
@@ -22,7 +22,23 @@ function string(list){
 }
 
 function actualiserEcran(){
-    p_ecran.innerText = string(input);
+    p_ecran.innerText = string(screenText);
+}
+
+function calculate(op){;
+    operation = op;
+    for (let i = 0; i < operation.length; i++){
+        if(operation[i].isNumber && (operation[i+1].isNumber || operation[i+1] == ",")){
+            operation[i] += operation[i+1];
+            operation.splice(i+1, 1);
+        }
+    }
+    // ()
+    // !
+    // * et /
+    // + et -
+    console.log(operation);
+    return operation;
 }
 
 //l'index est l'id du boutton.
@@ -51,12 +67,17 @@ const valeurs = {
 
 btns.forEach(button => {
     button.onclick = function(){
-        input.push(valeurs[button.id]);
+        screenText.push(valeurs[button.id]);
         actualiserEcran();
         };
 });
 
 btn_del.onclick = function(){
-    input.pop();
+    screenText.pop();
     actualiserEcran();
 };
+
+btn_egal.onclick = function(){
+    screenText = calculate(screenText);
+    actualiserEcran();
+}
