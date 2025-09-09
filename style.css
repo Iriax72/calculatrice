@@ -80,11 +80,11 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "zero0 AC egal";
+    grid-template-areas: "zero0 del egal";
 }
 
 #zero{grid-area: zero0;}
-#AC_button{grid-area: AC;}
+#del_btn{grid-area: del;}
 #egal{grid-area: egal;}
 
 button{

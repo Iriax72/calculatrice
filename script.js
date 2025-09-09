@@ -10,7 +10,7 @@ const cmds = [...cmd1.children];
 const btns = chiffres.concat(operateurs, cmds);
 
 const btn_egal = document.querySelector("#egal");
-const btn_AC = document.querySelector("AC_button");
+const btn_del = document.querySelector("del_btn");
 
 let input = [];
 const p_ecran = document.querySelector("#p_ecran");
@@ -56,7 +56,7 @@ btns.forEach(button => {
         };
 });
 
-btn_AC.onclick = function(){
+btn_del.onclick = function(){
     input.pop();
     actualiserEcran();
 };
