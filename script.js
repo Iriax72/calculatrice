@@ -10,7 +10,7 @@ const cmds = [...cmd1.children];
 const btns = chiffres.concat(operateurs, cmds);
 
 const btn_egal = document.querySelector("#egal");
-const btn_AC = document.querySelector("AC_btn");
+const btn_AC = document.querySelector("AC_button");
 
 let input = [];
 const p_ecran = document.querySelector("#p_ecran");
@@ -22,7 +22,7 @@ function string(list){
 }
 
 function actualiserEcran(){
-    p_ecran.innerText() = string(input);
+    p_ecran.innerText = string(input);
 }
 
 //l'index est l'id du boutton.
