@@ -92,6 +92,14 @@ body{
     max-width: 100%;
 }
 
+.footer{
+    padding-top: 8px;
+}
+
+.inFooter{
+    margin: 2px;
+}
+
 button{
     margin: 6px;
 }
