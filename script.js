@@ -35,13 +35,24 @@ function calculate(op){;
     }
     console.log(operation);
     // ()
-    for(let i = 0; i < operation ; i++){
+    // !
+    for(let i = 0; i < operation.length ; i++){
         if(operation[i] == "!"){
             operation[i-1] = factorielle(operation[i-1]);
             operation.slice(i, 1)
         }
     }
-    // * et /
+    // X et •/•
+    for(let i = 0; i < operation.length; i++){
+        if(operation[i] == "X"){
+            operation[i-1] *= operation[i+1]
+            operation.slice(i, 2)
+        }
+        else if(operation[i] == "/"){
+            operation[i-1] /= operation[i+1]
+            operation.slice(i, 2)
+        }
+    }
     // + et -
     console.log(operation);
     return operation;
