@@ -27,14 +27,20 @@ function actualiserEcran(){
 
 function calculate(op){;
     operation = op;
-    for (let i = 0; i < operation.length; i++){
+    for(let i = 0; i < operation.length; i++){
         if(operation[i].isNumber && (operation[i+1].isNumber || operation[i+1] == ",")){
             operation[i] += operation[i+1];
             operation.splice(i+1, 1);
         }
     }
+    console.log(operation);
     // ()
-    // !
+    for(let i = 0; i < operation ; i++){
+        if(operation[i] == "!"){
+            operation[i-1] = factorielle(operation[i-1]);
+            operation.slice(i, 1)
+        }
+    }
     // * et /
     // + et -
     console.log(operation);
