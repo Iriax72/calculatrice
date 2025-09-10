@@ -36,24 +36,35 @@ function calculate(op){;
     console.log(operation);
     // ()
     // !
-    for(let i = 0; i < operation.length ; i++){
+    for(let i=0; i < operation.length; i++){
         if(operation[i] == "!"){
             operation[i-1] = factorielle(operation[i-1]);
-            operation.slice(i, 1)
+            operation.splice(i, 1)
         }
     }
     // X et •/•
-    for(let i = 0; i < operation.length; i++){
+    for(let i=0; i < operation.length; i++){
         if(operation[i] == "X"){
             operation[i-1] *= operation[i+1]
-            operation.slice(i, 2)
+            operation.splice(i, 2)
         }
         else if(operation[i] == "/"){
             operation[i-1] /= operation[i+1]
-            operation.slice(i, 2)
+            operation.splice(i, 2)
         }
     }
     // + et -
+    for(let i=0; i < operation.length; i++){
+        if(operation[i] == "+"){
+            operation[i-1] += operation[i+1];
+            operation.splice(i, 2);
+        }
+        else if(operarion[i] == "-"){
+            operation[i-1] -= operation[i+1];
+            operation.splice(i, 2);
+        }
+    }
+
     console.log(operation);
     return operation;
 }
